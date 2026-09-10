@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battel Gruound Hub</title>
+    <!-- Iconify for icons -->
+    <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="stylesheet" href="dark.css">
+    <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+  <body class="dark">
+     
+    <!-- Navigation bar -->
+<!-- Navigation -->
+<div class="nav">
+  <div class="nav-left">
+    <img src="logo1.png" alt="Logo" />
+  </div>
+
+  <div class="nav-center">
+    <button onclick="showSection('home')">HOME</button>
+    <button onclick="showSection('tournament')">PAST TOURNAMENT</button>
+    <button onclick="showSection('ranking')">RANKING</button>
+    <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+    <button onclick="showSection('payment')">ALL SERIOUS</button>
+  </div>
+
+  <div class="nav-right" id="nav-right">
+  <!-- This will be filled by JavaScript dynamically -->
+</div>
+<div class="hamburger" onclick="toggleMenu()">
+  <i class="fa fa-bars"></i>
+</div>
+
+
+</div>
+
+<!-- Overlay Sidebar (Mobile) -->
+<!-- Overlay Sidebar (Mobile) -->
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-top">
+    <button onclick="showSection('home')">HOME</button>
+    <button onclick="showSection('tournament')">TOURNAMENT</button>
+    <button onclick="showSection('ranking')">RANKING</button>
+    <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+    <button onclick="showSection('payment')">PAYMENT</button>
+  </div>
+
+  <!-- ✅ You did this part perfectly -->
+  <div class="hamburger-user" id="hamburger-user">
+    <!-- username/logout will appear here on mobile -->
+  </div>
+</div>
+
+
+
+  <!-- Past Tournament Section -->
+  <div class="section tournament-section" id="tournament" style="display: none;background-color: #1C1300 ;">
+    <div class="tournament-intro" >
+      <div class="tournament-text" style="flex: 1;">
+        <h2>BGIS2025</h2>
+        <p>
+          realme BGIS 2025 went bigger, bolder, & beyond expectations. With 500k+ peak CCV and a peaked arena,
+          VCT conquered the chaos and claimed the crown. The battle is over. History was forged.
+        </p>
+        <p class="subtext">Upcoming tournament ka advertisement</p>
+      </div>
+      <div class="tournament-image" style="flex: 1;">
+        <img src="image.png" alt="BGIS Poster" style="max-width: 100%; border-radius: 10px;" />
+      </div>
+    </div>
+
+    <h3 style="color: #1d6dba; font-size: 1.5rem; margin-top: 40px; text-align: center; background-color: #1C1300 ;">PAST TOURNAMENTS</h3>
+    <div class="past-tournaments-container" >
+      <div class="past-tournaments-slider">
+        <div class="past-slider-track" id="pastSliderTrack">
+
+      <div class="tournament-card"  >
+         <div class="player-avatars" style="height: 250px; width: 100%; ;">
+    <img src="file_00000000e3fc622fb7aae0583ee252d5.png" alt="Player 2">
+  </div>
+        <p>Tournament 1</p><p>12 May 2025</p>
+      </div>
+
+      <div class="tournament-card"  >
+       <div class="player-avatars" style="height: 250px; width: 100%; ;">
+    <img src="file_000000006248622faf9df64a48660015.png" alt="Player 2">
+  </div>
+        <p>Tournament 2</p><p>7 May 2025</p>
+      </div>
+      <div class="tournament-card"  >
+        <div class="player-avatars" style="height: 250px; width: 100%; ;">
+    <img src="file_00000000b0c4622f836988fc3079e953.png" alt="Player 2">
+  </div>
+        <p>Tournament 3</p><p>1 May 2025</p>
+      </div>
+        <div class="tournament-card"  >
+         <div class="player-avatars" style="height: 250px; width: 100%; ;">
+    <img src="file_00000000e3fc622fb7aae0583ee252d5.png" alt="Player 2">
+  </div>
+        <p>Tournament 1</p><p>12 May 2025</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+   
+      <section class="video-slider">
+  <h2>🎥 Tournament Highlights</h2>
+  <div class="slider-track">
+    <!-- Video Card 1 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank">
+        <img src="ROUND 1 (3).png" alt="Video Thumbnail">
+      </a>
+    </div>
+
+    
+<!-- Video Card 2 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank">
+        <img src="ROUND 1 (4).png" alt="Video Thumbnail">
+      </a>
+    </div>
+
+    <!-- Video Card 3 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank">
+        <img src="ROUND 1 (5).png" alt="Video Thumbnail">
+      </a>
+    </div>
+    <!-- Add more video cards -->
+  </div>
+</section>
+
+
+      
+
+     <footer style="background-color: #393b17; color: #fff; padding: 40px 20px; text-align: center;">
+        <div class="footer-container" style="display: flex; flex-direction: column; gap: 30px; max-width: 1200px; margin: auto;justify-self: center;">
+      
+
+          
+          <!-- Branding and Description -->
+          <div class="footer-branding">
+            <h2 style="font-size: 1.8rem;">BATTLEGROUND HUB Tournaments</h2>
+            <p style="font-size: 0.95rem; max-width: 600px; margin: 10px auto;">
+              Your battleground for competitive, fair, and electrifying BGMI action. We host daily & weekly unofficial tournaments to fuel your passion.
+            </p>
+          </div>
+      
+          <!-- Footer Links -->
+          <div class="footer-links" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            <div>
+              <h4>Quick Links</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Tournaments</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Join</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Legal</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Terms of Service</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li>Email: support@battlegroundhub77.com</li>
+                <li>Phone: +91-9876543210</li>
+                <li>Discord: discord.gg/battlegroundhub77</li>
+              </ul>  
+            </div>
+          </div>
+      
+          <!-- Footer Bottom -->
+          <!-- Footer Bottom with Logo -->
+<div class="footer-bottom" style="font-size: 0.85rem; color: #888; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+  <p>&copy; 2025 BATTLEGROUND HUB. All rights reserved.</p>
+  <img src="logo1.png" alt="Footer Logo" style="height: 80px; width: auto;" />
+</div>
+
+        </div>
+      </footer>
+  </div>
+
+
+      <!-- Home Section -->
+      <div class="section home-section" id="home">
+        <div class="toggle-container">
+          <label>
+            <!-- Hidden checkbox drives the CSS animation -->
+            <input class="toggle-checkbox" type="checkbox" id="modeToggle" checked/>
+            <!-- Clicking anywhere on the toggle-slot will switch to dark mode -->
+            <div class="toggle-slot" onclick="switchToLight()">
+              <div class="sun-icon-wrapper">
+                <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+              </div>
+              <div class="toggle-button"></div>
+              <div class="moon-icon-wrapper">
+                <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+              </div>
+            </div>
+          </label>
+                 </div>
+      <div class="intro-message">
+  <p class="toggle-text">Click the toggle to switch to GAME</p>
+  <h1 class="battle-heading">Welcome to The Battle World</h1>
+  <p class="create-history">Join thousands of players across the globe in competitive gaming tournaments. Prove your skills, climb the leaderboard, and win exciting rewards.</p>
+</div>
+
+      <section class="poster-carousel">
+  <div class="carousel-container">
+    <button class="arrow left-arrow" onclick="slideLeft()">&#10094;</button>
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-poster poster-1"></div>
+      <div class="carousel-poster poster-2"></div>
+      <div class="carousel-poster poster-3"></div>
+      <div class="carousel-poster poster-4"></div>
+      <div class="carousel-poster poster-5"></div>
+      <div class="carousel-poster poster-6"></div>
+      <div class="carousel-poster poster-7"></div>
+    </div>
+    <button class="arrow right-arrow" onclick="slideRight()">&#10095;</button>
+  </div>
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+
+     
+      <section class="hero">
+        <h1>Compete. Win. Conquer.</h1>
+        <p>Join thrilling BGMI tournaments and prove your squad’s dominance in the arena. Get rewards, recognition, and pure action!</p>
+        <button class="cta-btn" onclick="window.location.href='tournaments.html'">Join a Tournament</button>
+      </section>
+
+
+
+
+      <section class="intro">
+        <h2>Kya Tum Ready Ho?</h2>
+        <p>Yeh koi normal BGMI tournament nahi hai. Yeh hai ek battleground jahan har bullet, har move aur har kill matter karta hai! Fitness Arena par milta hai aapko ek ultimate stage — jahaan thrill, glory aur cash prizes aapka intezaar kar rahe hain. Apni squad ke saath aa jao, aur dikha do India ko ki asli warriors kaun hain!</p>
+        <div class="buttons">
+          <a href="register.html">Join Tournament</a>
+          <a href="tournaments.html">View Tournaments</a>
+        </div>
+      </section>
+      
+     <section class="slider-container">
+  <button class="arrow arrow-left" id="prev">&#8592;</button>
+  <div class="slider-track" id="swipeSlider">
+    <!-- Tournament Cards -->
+     <div class="card">
+  <h3>Valorant Vengeance</h3>
+  <p>Date: 25 May 2025</p>
+  <p>Entry Fee: ₹80</p>
+  <p>Prize Pool: ₹4000</p>
+  <button>Join Now</button>
+</div>
+
+<div class="card">
+  <h3>FIFA Champions League</h3>
+  <p>Date: 28 May 2025</p>
+  <p>Entry Fee: ₹60</p>
+  <p>Prize Pool: ₹2500</p>
+  <button>Join Now</button>
+</div>
+
+<div class="card">
+  <h3>Sniper King - Free Fire</h3>
+  <p>Date: 30 May 2025</p>
+  <p>Entry Fee: Free</p>
+  <p>Prize Pool: ₹1000</p>
+  <button>Join Now</button>
+</div>
+
+    <div class="card">
+      <h3>BGMI Squad Showdown</h3>
+      <p>Date: 5 May 2025</p>
+      <p>Entry Fee: ₹50</p>
+      <p>Prize Pool: ₹2000</p>
+      <button>Join Now</button>
+    </div>
+    <div class="card">
+      <h3>Free Fire Clash</h3>
+      <p>Date: 10 May 2025</p>
+      <p>Entry Fee: ₹30</p>
+      <p>Prize Pool: ₹1500</p>
+      <button>Join Now</button>
+    </div>
+    <div class="card">
+      <h3>COD Mobile Warfare</h3>
+      <p>Date: 20 May 2025</p>
+      <p>Entry Fee: ₹60</p>
+      <p>Prize Pool: ₹3000</p>
+      <button>Join Now</button>
+    </div>
+  </div>
+  <button class="arrow arrow-right" id="next">&#8594;</button>
+</section>
+
+
+      
+      <!-- Testimonial Section -->
+      <section class="testimonial-section">
+        <div class="container">
+          <h2 class="section-title">🔥 Warzone Warriors Speak! 🔥</h2>
+          <div class="testimonial-cards">
+      
+            <div class="testimonial-card">
+              <img src="https://i.ibb.co/xJ3jvv5/player1.jpg" alt="Player 1" class="testimonial-img">
+              <h3 class="player-name">SKULLxOP</h3>
+              <p class="team-name">Team Reapers</p>
+              <p class="testimonial-text">"Mera adrenaline tab peak pe hota hai jab main BATTLEGROUND HUB ke custom rooms mein utarta hoon. Real competition, real thrill!"</p>
+            </div>
+      
+            <div class="testimonial-card">
+              <img src="https://i.ibb.co/Dt7YZ4B/player2.jpg" alt="Player 2" class="testimonial-img">
+              <h3 class="player-name">ShadowKiller</h3>
+              <p class="team-name">Squad Vipers</p>
+              <p class="testimonial-text">"Best unofficial BGMI tourneys out there! Management aur fairness dono top-notch hai!"</p>
+            </div>
+      
+            <div class="testimonial-card">
+              <img src="https://i.ibb.co/BC3gV5q/player3.jpg" alt="Player 3" class="testimonial-img">
+              <h3 class="player-name">NoScopeRaj</h3>
+              <p class="team-name">Deadly Aimz</p>
+              <p class="testimonial-text">"Kya lagta hai tu jeet jayega? Try karo BATTLEGROUND HUB ke lobby mein, sabka asli level dikhta hai yahan!"</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <section class="video-slider">
+  <h2>🎥 Tournament Highlights</h2>
+  <div class="slider-track">
+    <!-- Video Card 1 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank">
+        <img src="ROUND 1 (3).png" alt="Video Thumbnail">
+      </a>
+    </div>
+
+    
+<!-- Video Card 2 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank">
+        <img src="ROUND 1 (4).png" alt="Video Thumbnail">
+      </a>
+    </div>
+
+    <!-- Video Card 3 -->
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank">
+        <img src="ROUND 1 (5).png" alt="Video Thumbnail">
+      </a>
+    </div>
+    <!-- Add more video cards -->
+  </div>
+</section>
+
+
+      
+      <!-- 🌐 Stay Connected Section -->
+      <section class="social-media" style="padding: 50px 20px; background: #1C1300 ; color: #fff; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">🌐 Stay Connected With Us</h2>
+        <p style="margin-bottom: 30px;">Join our social platforms for match updates, announcements & highlights</p>
+        <div class="social-icons" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+      
+        <div class="icons">
+
+  <a href="https://www.facebook.com/YourPage" target="_blank" class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span>
+      <i class="fa-brands fa-facebook"></i>
+    </span>
+  </a>
+
+  <a href="https://wa.me/YourPhoneNumber" target="_blank" class="icon whatsapp">
+    <div class="tooltip">Whatsapp</div>
+    <span>
+      <i class="fa-brands fa-whatsapp"></i>
+    </span>
+  </a>
+
+  <a href="https://www.instagram.com/YourUsername" target="_blank" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span>
+      <i class="fa-brands fa-instagram"></i>
+    </span>
+  </a>
+
+  <a href="https://twitter.com/YourUsername" target="_blank" class="icon twitter">
+    <div class="tooltip">Twitter</div>
+    <span>
+      <i class="fa-brands fa-twitter"></i>
+    </span>
+  </a>
+
+</div>
+
+        </div>
+      </section>
+      
+      <!-- Font Awesome CDN for icons (place this in your <head>) -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      
+      <!-- Optional CSS for hover effect (in your style.css or <style>) -->
+      
+      
+        <!-- Footer Section -->
+      <footer style="background-color: #393b17; color: #fff; padding: 40px 20px; text-align: center;">
+        <div class="footer-container" style="display: flex; flex-direction: column; gap: 30px; max-width: 1200px; margin: auto;justify-self: center;">
+      
+
+          
+          <!-- Branding and Description -->
+          <div class="footer-branding">
+            <h2 style="font-size: 1.8rem;">BATTLEGROUND HUB Tournaments</h2>
+            <p style="font-size: 0.95rem; max-width: 600px; margin: 10px auto;">
+              Your battleground for competitive, fair, and electrifying BGMI action. We host daily & weekly unofficial tournaments to fuel your passion.
+            </p>
+          </div>
+      
+          <!-- Footer Links -->
+          <div class="footer-links" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            <div>
+              <h4>Quick Links</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Tournaments</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Join</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Legal</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Terms of Service</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li>Email: support@battlegroundhub77.com</li>
+                <li>Phone: +91-9876543210</li>
+                <li>Discord: discord.gg/battlegroundhub77</li>
+              </ul>  
+            </div>
+          </div>
+      
+          <!-- Footer Bottom -->
+          <!-- Footer Bottom with Logo -->
+<div class="footer-bottom" style="font-size: 0.85rem; color: #888; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+  <p>&copy; 2025 BATTLEGROUND HUB. All rights reserved.</p>
+  <img src="logo1.png" alt="Footer Logo" style="height: 80px; width: auto;" />
+</div>
+
+        </div>
+      </footer>
+      
+      
+    </div>
+
+    <!-- Registration Section -->
+   
+
+<!-- Login Section -->
+<!-- ✔️ Login Section -->
+<div class="section registration-section" id="registration" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <div class="logo-container">
+        <img src="logo1.png" alt="Logo">
+      </div>
+      <h2>Login to the Arena</h2>
+
+      <form>
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Gmail ID" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        
+        
+        <button type="submit" class="create-account-btn">Create Account</button>
+      </form>
+
+      <div class="or-section">OR</div>
+      <div class="social-buttons">
+        <button class="google"><i class="fab fa-google"></i> Google</button>
+        <button class="faceboo"><i class="fab fa-facebook-f"></i> Facebook</button>
+        <button class="discord"><i class="fab fa-discord"></i> Discord</button>
+      </div>
+
+      <div class="forgot-login">
+       <a href="javascript:void(0)" class="forgot" onclick="showSection('forgot')">Forgot Password?</a>
+
+       <a href="javascript:void(0)" class="login-btn" onclick="showSection('signup')">Sign Up</a>
+
+      </div>
+      <a href="#" class="back-btn" onclick="goBack()">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✔️ Forgot Password Section -->
+<div class="section registration-section" id="forgot" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <h2>Reset Password with OTP</h2>
+
+      <!-- Send OTP form -->
+      <form id="otpRequestForm">
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" name="email" placeholder="Enter your Gmail" required>
+        </div>
+        <button type="submit" class="login-button">Send OTP</button>
+      </form>
+
+      <!-- Verify OTP + reset password -->
+      <form id="resetWithOtpForm" style="display: none;">
+        <div class="input-container">
+          <i class="fa fa-key"></i>
+          <input type="text" name="otp" placeholder="Enter OTP" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" name="newPassword" placeholder="New Password" required>
+        </div>
+        <button type="submit" class="login-button">Reset Password</button>
+      </form>
+
+      <a href="javascript:void(0)" onclick="showSection('registration')">Back to Login</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✔️ Signup Section -->
+<div class="section registration-section" id="signup" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <div class="logo-container">
+        <img src="logo1.png" alt="Logo">
+      </div>
+      <h2>Create Your Account</h2>
+
+     <form action="signup.php" method="post">
+        <div class="input-container">
+          <i class="fa fa-user"></i>
+          <input type="text" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+            <input type="email" name="email" placeholder="Gmail ID" required pattern=".+@gmail\.com">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+         <input type="password" name="password" placeholder="Password" required minlength="12">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-phone"></i>
+          <input type="tel" name="phone" placeholder="Mobile No." required pattern="[0-9]{10}">
+        </div>
+        <button type="submit" class="create-account-btn">Sign Up</button>
+      </form>
+
+      <div class="or-section">OR</div>
+      <div class="social-buttons">
+        <button class="google"><i class="fab fa-google"></i> Google</button>
+        <button class="faceboo"><i class="fab fa-facebook-f"></i> Facebook</button>
+        <button class="discord"><i class="fab fa-discord"></i> Discord</button>
+      </div>
+
+      <div class="forgot-login">
+       <a href="javascript:void(0)" class="forgot" onclick="showSection('registration')">Already have an account? Login</a>
+
+
+      </div>
+      <a href="#" class="back-btn" onclick="goBack()">Back to Home</a>
+    </div>
+  </div>
+ 
+
+</div>
+ <!-- ✔️ Forgot Password Section -->
+<div class="section registration-section" id="forgot" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <div class="logo-container">
+        <img src="logo1.png" alt="Logo">
+      </div>
+      <h2>Reset Your Password</h2>
+
+      <form id="resetForm">
+
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Enter your Gmail ID" required>
+        </div>
+        <button type="submit" class="create-account-btn">Send Reset Link</button>
+      </form>
+
+      <div class="forgot-login">
+        <a href="javascript:void(0)" onclick="showSection('registration')">Back to Login</a>
+        <a href="javascript:void(0)" onclick="goBack()">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Ranking Section -->
+<div class="section ranking-section" id="ranking" style="display: none;background-color:  #1C1300 ;">
+
+  <h1 class="main-heading">RANKINGS</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active">PLAYERS</button>
+    <button class="tab">TEAM</button>
+  </div>
+
+  <!-- Top 10 Players -->
+  <h2 class="sub-heading">TOP 10 PLAYERS</h2>
+  <div class="top-players">
+    <!-- Repeat for 10 players -->
+    <!-- Example card -->
+    <div class="player-card">
+  <div class="rank-badge">1</div>
+  <div class="player-avatar">
+    <img src="file_00000000ca6861f887a98913a4a4453d.png" alt="Player 1">
+  </div>
+  <div class="player-info">
+    <p>Player 1</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">2</div>
+  <div class="player-avatar">
+    <img src="player2.png" alt="Player 2">
+  </div>
+  <div class="player-info">
+    <p>Player 2</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">3</div>
+  <div class="player-avatar">
+    <img src="player3.png" alt="Player 3">
+  </div>
+  <div class="player-info">
+    <p>Player 3</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">4</div>
+  <div class="player-avatar">
+    <img src="player4.png" alt="Player 4">
+  </div>
+  <div class="player-info">
+    <p>Player 4</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">5</div>
+  <div class="player-avatar">
+    <img src="player5.png" alt="Player 5">
+  </div>
+  <div class="player-info">
+    <p>Player 5</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">6</div>
+  <div class="player-avatar">
+    <img src="player6.png" alt="Player 6">
+  </div>
+  <div class="player-info">
+    <p>Player 6</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">7</div>
+  <div class="player-avatar">
+    <img src="player7.png" alt="Player 7">
+  </div>
+  <div class="player-info">
+    <p>Player 7</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">8</div>
+  <div class="player-avatar">
+    <img src="player8.png" alt="Player 8">
+  </div>
+  <div class="player-info">
+    <p>Player 8</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">9</div>
+  <div class="player-avatar">
+    <img src="player9.png" alt="Player 9">
+  </div>
+  <div class="player-info">
+    <p>Player 9</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+<div class="player-card">
+  <div class="rank-badge">10</div>
+  <div class="player-avatar">
+    <img src="player10.png" alt="Player 10">
+  </div>
+  <div class="player-info">
+    <p>Player 10</p>
+    <p class="points">Global PTS</p>
+  </div>
+</div>
+
+  </div>
+
+  <!-- All Players Table -->
+  <div class="table-container">
+  <table class="ranking-table">
+    <thead>
+      <tr>
+        <th>RANK</th>
+        <th>PLAYER NAME</th>
+        <th>TEAM NAME</th>
+        <th>GLOBAL POINTS</th>
+        <th>FINISHES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic rows inserted by JS -->
+    </tbody>
+  </table>
+</div>
+
+
+  
+  <!-- Pagination -->
+  <div class="pagination">
+    <span>Showing 10 to 50 records</span>
+    <div class="page-numbers">
+      <a href="#" class="prev">&lt;</a>
+      <a href="#">1</a>
+      <a href="#" class="active">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#" class="next">&gt;</a>
+    </div>
+  </div>
+
+  <footer style="background-color:  #393b17; color: #fff; padding: 40px 20px; text-align: center;">
+        <div class="footer-container" style="display: flex; flex-direction: column; gap: 30px; max-width: 1200px; margin: auto;justify-self: center;">
+      
+
+          
+          <!-- Branding and Description -->
+          <div class="footer-branding">
+            <h2 style="font-size: 1.8rem;">BATTLEGROUND HUB Tournaments</h2>
+            <p style="font-size: 0.95rem; max-width: 600px; margin: 10px auto;">
+              Your battleground for competitive, fair, and electrifying BGMI action. We host daily & weekly unofficial tournaments to fuel your passion.
+            </p>
+          </div>
+      
+          <!-- Footer Links -->
+          <div class="footer-links" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            <div>
+              <h4>Quick Links</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Tournaments</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Join</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Legal</h4>
+              <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Terms of Service</a></li>
+                <li><a href="#" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                <li>Email: support@battlegroundhub77.com</li>
+                <li>Phone: +91-9876543210</li>
+                <li>Discord: discord.gg/battlegroundhub77</li>
+              </ul>  
+            </div>
+          </div>
+      
+          <!-- Footer Bottom -->
+          <!-- Footer Bottom with Logo -->
+<div class="footer-bottom" style="font-size: 0.85rem; color: #888; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+  <p>&copy; 2025 BATTLEGROUND HUB. All rights reserved.</p>
+  <img src="logo1.png" alt="Footer Logo" style="height: 80px; width: auto;" />
+</div>
+
+        </div>
+      </footer>
+</section>
+
+
+<!-- Announcement Section -->
+<div class="section announcement-section" id="announcement"  style="display: none;" >
+  <h1>Recently Announced</h1>
+  <div class="announcement-content">
+    <h2>realme BMPS 2025</h2>
+    <p>The biggest stage in BGMI is gearing up for its return. Get ready for intense action, fierce rivalries, and the ultimate showdown.</p>
+  </div>
+</div>
+
+
+
+<!-- Payment Section -->
+<div class="section payment-section" id="payment">
+  <h1>Payment Info & FAQs</h1>
+
+  <div class="faq-box">
+  <div class="faq-item">
+    <button class="faq-question">💳 How do I pay the entry fee?</button>
+    <div class="faq-answer">You can pay using UPI, Paytm, or Google Pay. Payment details will be shown after registration.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">📅 Can I cancel after payment?</button>
+    <div class="faq-answer">Cancellations are allowed up to 24 hours before the tournament. Refunds will be processed within 3-5 days.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">📧 What if payment fails?</button>
+    <div class="faq-answer">If payment fails, you won't be registered. Please retry or contact support with your payment reference.</div>
+  </div>
+</div>
+</div>
+
+
+
+    <script>
+      function toggleMenu() {
+      const navButtons = document.querySelector('.nav-buttons');
+      if (navButtons) navButtons.classList.toggle('show');
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach((section) => section.style.display = 'none');
+
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.style.display = sectionId === "registration" ? "flex" : "block";
+        console.log("Switched to:", sectionId);
+      } else {
+        console.error("Section not found:", sectionId);
+      }
+
+      const buttons = document.querySelectorAll('.nav button, .sidebar button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      const clickedButton = Array.from(buttons).find(btn => btn.textContent.toLowerCase().includes(sectionId));
+      if (clickedButton) clickedButton.classList.add('active');
+
+      if (sectionId === "ranking") {
+        populateRankingTable();
+      }
+    }
+      
+      function switchToLight() {
+        const toggle = document.getElementById("modeToggle");
+        toggle.checked = !toggle.checked;
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 150);
+      }
+
+     function populateRankingTable() {
+      const tableBody = document.getElementById("ranking-table")?.querySelector("tbody");
+      if (!tableBody) return;
+      tableBody.innerHTML = "";
+      const rankingData = [
+        { rank: 1, name: "Alice", score: 98 },
+        { rank: 2, name: "Bob", score: 91 },
+        { rank: 3, name: "Charlie", score: 87 }
+      ];
+      rankingData.forEach(player => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${player.rank}</td><td>${player.name}</td><td>${player.score}</td>`;
+        tableBody.appendChild(row);
+      });
+    }
+  </script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isAlreadyOpen = answer.classList.contains('show');
+
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        a.classList.remove('show');
+      });
+
+      // Toggle current one only if it wasn't open
+      if (!isAlreadyOpen) {
+        answer.classList.add('show');
+      }
+    });
+  });
+});
+</script>
+
+<script>
+let currentSlide = 0;
+let autoSlideInterval;
+let isDragging = false;
+let startX = 0;
+
+const track = document.getElementById("carouselTrack");
+const dotsContainer = document.getElementById("carouselDots");
+
+function getVisiblePosters() {
+  return Array.from(document.querySelectorAll(".carousel-poster"))
+    .filter(p => window.getComputedStyle(p).display !== "none");
+}
+
+function updateDots() {
+  dotsContainer.innerHTML = "";
+  getVisiblePosters().forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === currentSlide) dot.classList.add("active");
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function updateSlidePosition() {
+  const posters = getVisiblePosters();
+  if (currentSlide >= posters.length) currentSlide = 0;
+  if (posters.length) {
+    track.style.transform = `translateX(-${currentSlide * posters[0].clientWidth}px)`;
+  } else {
+    track.style.transform = `translateX(0)`;
+  }
+  document.querySelectorAll(".dot").forEach((d, i) =>
+    d.classList.toggle("active", i === currentSlide)
+  );
+}
+
+function slideRight() {
+  const posters = getVisiblePosters();
+  if (!posters.length) return;
+  currentSlide = (currentSlide + 1) % posters.length;
+  updateSlidePosition(); resetAutoSlide();
+}
+function slideLeft() {
+  const posters = getVisiblePosters();
+  if (!posters.length) return;
+  currentSlide = (currentSlide - 1 + posters.length) % posters.length;
+  updateSlidePosition(); resetAutoSlide();
+}
+function goToSlide(i) {
+  currentSlide = i; updateSlidePosition(); resetAutoSlide();
+}
+function startAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(slideRight, 4000);
+}
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// Swipe / Drag Support
+track.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+  track.style.transition = "none";
+});
+track.addEventListener("touchend", e => {
+  const diff = e.changedTouches[0].clientX - startX;
+  track.style.transition = "transform 0.5s ease";
+  if (diff > 50) slideLeft();
+  else if (diff < -50) slideRight();
+  else updateSlidePosition();
+});
+track.addEventListener("mousedown", e => {
+  isDragging = true; startX = e.clientX;
+  track.style.cursor = "grabbing";
+  track.style.transition = "none";
+});
+track.addEventListener("mousemove", e => {
+  if (!isDragging) return;
+  const posters = getVisiblePosters();
+  if (!posters.length) return;
+  const diff = e.clientX - startX;
+  track.style.transform = `translateX(${-currentSlide * posters[0].clientWidth + diff}px)`;
+});
+track.addEventListener("mouseup", e => {
+  if (!isDragging) return;
+  isDragging = false;
+  track.style.cursor = "default";
+  track.style.transition = "transform 0.5s ease";
+  const diff = e.clientX - startX;
+  if (diff > 100) slideLeft();
+  else if (diff < -100) slideRight();
+  else updateSlidePosition();
+});
+track.addEventListener("mouseleave", () => {
+  if (isDragging) {
+    isDragging = false;
+    track.style.cursor = "default";
+    track.style.transition = "transform 0.5s ease";
+    updateSlidePosition();
+  }
+});
+window.addEventListener("resize", () => {
+  currentSlide = 0; updateDots(); updateSlidePosition();
+});
+window.addEventListener("load", () => {
+  updateDots(); updateSlidePosition(); startAutoSlide();
+});
+</script>
+
+<script>
+  const swipeSlider = document.getElementById('swipeSlider');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  prevBtn.onclick = () => {
+    const cardWidth = swipeSlider.querySelector('.card').offsetWidth + 20;
+    swipeSlider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  };
+
+  nextBtn.onclick = () => {
+    const cardWidth = swipeSlider.querySelector('.card').offsetWidth + 20;
+    swipeSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  };
+
+  let isDraggingCard = false;
+  let startX_card = 0;
+  let scrollLeft_card;
+
+  swipeSlider.addEventListener('mousedown', (e) => {
+    isDraggingCard = true;
+    swipeSlider.classList.add('dragging');
+    startX_card = e.pageX - swipeSlider.offsetLeft;
+    scrollLeft_card = swipeSlider.scrollLeft;
+  });
+
+  swipeSlider.addEventListener('mouseleave', () => {
+    isDraggingCard = false;
+    swipeSlider.classList.remove('dragging');
+  });
+
+  swipeSlider.addEventListener('mouseup', () => {
+    isDraggingCard = false;
+    swipeSlider.classList.remove('dragging');
+  });
+
+  swipeSlider.addEventListener('mousemove', (e) => {
+    if (!isDraggingCard) return;
+    e.preventDefault();
+    const x = e.pageX - swipeSlider.offsetLeft;
+    const walk = (x - startX_card) * 1.5;
+    swipeSlider.scrollLeft = scrollLeft_card - walk;
+  });
+
+  // Touch swipe
+  swipeSlider.addEventListener('touchstart', (e) => {
+    startX_card = e.touches[0].pageX - swipeSlider.offsetLeft;
+    scrollLeft_card = swipeSlider.scrollLeft;
+  });
+
+  swipeSlider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX - swipeSlider.offsetLeft;
+    const walk = (x - startX_card) * 1.5;
+    swipeSlider.scrollLeft = scrollLeft_card - walk;
+  });
+</script>
+
+
+  
+
+<script>
+              /* login */
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section) => {
+    section.style.display = (section.id === sectionId) ? (sectionId === "registration" || sectionId === "signup" ? "flex" : "block") : "none";
+  });
+
+  const nav = document.querySelector('.nav');
+  if (sectionId === "registration" || sectionId === "signup") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+
+  history.pushState({section: sectionId}, '', `#${sectionId}`);
+}
+
+window.onpopstate = function(event) {
+  const sectionId = event.state?.section || 'home';
+  showSection(sectionId);
+};
+
+function goBack() {
+  showSection('home');
+}
+
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+}
+
+function closeMenu() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+</script>
+
+
+
+
+
+<script>
+  // navvvvvv
+  function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sidebar").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+  }
+</script>
+
+
+
+<script>
+  /// rankingnesfs
+/* ----- Tab Switching ----- */
+const tabs = document.querySelectorAll('.tab');
+const topPlayers = document.querySelector('.top-players');
+const table = document.querySelector('.ranking-table');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Switch based on tab text
+    if (tab.textContent.trim() === "PLAYERS") {
+      topPlayers.style.display = 'grid';
+      table.style.display = 'table';
+    } else {
+      topPlayers.style.display = 'none';
+      table.style.display = 'none';
+
+      // You can add a team section later here
+      alert('Team Rankings Section Coming Soon!');
+    }
+  });
+});
+
+
+/* ----- Pagination ----- */
+// Simulated data example
+const data = [
+  { rank: 1, name: '#tharabhaigamer', team: 'VMAX', points: 153, finishes: 71 },
+  { rank: 2, name: '#lord', team: 'VMAX', points: 140, finishes: 65 },
+  { rank: 3, name: 'pro@ansh', team: 'XTEAM', points: 138, finishes: 60 },
+  { rank: 4, name: 'PLAYER4', team: 'YTEAM', points: 120, finishes: 58 },
+  { rank: 5, name: 'PLAYER5', team: 'ZTEAM', points: 118, finishes: 55 },
+  { rank: 6, name: 'PLAYER6', team: 'VMAX', points: 110, finishes: 50 },
+  { rank: 7, name: 'PLAYER7', team: 'XTEAM', points: 108, finishes: 47 },
+  { rank: 8, name: 'PLAYER8', team: 'YTEAM', points: 105, finishes: 45 },
+  { rank: 9, name: 'PLAYER9', team: 'ZTEAM', points: 102, finishes: 42 },
+  { rank: 10, name: 'PLAYER10', team: 'VMAX', points: 100, finishes: 40 },
+  { rank: 11, name: 'PLAYER11', team: 'XTEAM', points: 98, finishes: 38 },
+  { rank: 12, name: 'PLAYER12', team: 'YTEAM', points: 95, finishes: 35 },
+  { rank: 13, name: 'PLAYER13', team: 'ZTEAM', points: 92, finishes: 32 },
+  { rank: 14, name: 'PLAYER14', team: 'VMAX', points: 90, finishes: 30 },
+  { rank: 15, name: 'PLAYER15', team: 'XTEAM', points: 88, finishes: 28 }
+  // Add more if needed
+];
+
+const rowsPerPage = 5;
+let currentPage = 1;
+
+function displayTable(page) {
+  const tbody = document.querySelector('.ranking-table tbody');
+  tbody.innerHTML = '';
+
+  const start = (page - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+  const paginatedItems = data.slice(start, end);
+
+  paginatedItems.forEach(player => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${player.rank}</td>
+      <td>${player.name}</td>
+      <td>${player.team}</td>
+      <td>${player.points}</td>
+      <td>${player.finishes}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
+function setupPagination() {
+  const pageNumbers = document.querySelector('.page-numbers');
+  pageNumbers.innerHTML = '';
+
+  const totalPages = Math.ceil(data.length / rowsPerPage);
+
+  // Prev Button
+  const prev = document.createElement('a');
+  prev.href = '#';
+  prev.innerHTML = '&lt;';
+  prev.classList.add('prev');
+  prev.onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      displayTable(currentPage);
+      setupPagination();
+    }
+  };
+  pageNumbers.appendChild(prev);
+
+  // Number Buttons
+  for (let i = 1; i <= totalPages; i++) {
+    const page = document.createElement('a');
+    page.href = '#';
+    page.textContent = i;
+    if (i === currentPage) page.classList.add('active');
+    page.onclick = () => {
+      currentPage = i;
+      displayTable(currentPage);
+      setupPagination();
+    };
+    pageNumbers.appendChild(page);
+  }
+
+  // Next Button
+  const next = document.createElement('a');
+  next.href = '#';
+  next.innerHTML = '&gt;';
+  next.classList.add('next');
+  next.onclick = () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      displayTable(currentPage);
+      setupPagination();
+    }
+  };
+  pageNumbers.appendChild(next);
+}
+
+// Initialize table
+displayTable(currentPage);
+setupPagination();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  /* ----- Tab Switching ----- */
+  const tabs = document.querySelectorAll('.tab');
+  const topPlayers = document.querySelector('.top-players');
+  const table = document.querySelector('.ranking-table');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      if (tab.textContent.trim() === "PLAYERS") {
+        topPlayers.style.display = 'grid';
+        table.style.display = 'table';
+      } else {
+        topPlayers.style.display = 'none';
+        table.style.display = 'none';
+        alert('Team Rankings Coming Soon!');
+      }
+    });
+  });
+
+  /* ----- Pagination ----- */
+  const data = [
+    { rank: 1, name: '#tharabhaigamer', team: 'VMAX', points: 153, finishes: 71 },
+    { rank: 2, name: '#lord', team: 'VMAX', points: 140, finishes: 65 },
+    { rank: 3, name: 'pro@ansh', team: 'XTEAM', points: 138, finishes: 60 },
+    { rank: 4, name: 'PLAYER4', team: 'YTEAM', points: 120, finishes: 58 },
+    { rank: 5, name: 'PLAYER5', team: 'ZTEAM', points: 118, finishes: 55 },
+    { rank: 6, name: 'PLAYER6', team: 'VMAX', points: 110, finishes: 50 },
+    { rank: 7, name: 'PLAYER7', team: 'XTEAM', points: 108, finishes: 47 },
+    { rank: 8, name: 'PLAYER8', team: 'YTEAM', points: 105, finishes: 45 },
+    { rank: 9, name: 'PLAYER9', team: 'ZTEAM', points: 102, finishes: 42 },
+    { rank: 10, name: 'PLAYER10', team: 'VMAX', points: 100, finishes: 40 },
+    { rank: 11, name: 'PLAYER11', team: 'XTEAM', points: 98, finishes: 38 },
+    { rank: 12, name: 'PLAYER12', team: 'YTEAM', points: 95, finishes: 35 },
+    { rank: 13, name: 'PLAYER13', team: 'ZTEAM', points: 92, finishes: 32 },
+    { rank: 14, name: 'PLAYER14', team: 'VMAX', points: 90, finishes: 30 },
+    { rank: 15, name: 'PLAYER15', team: 'XTEAM', points: 88, finishes: 28 }
+  ];
+
+  const rowsPerPage = 5;
+  let currentPage = 1;
+
+  function displayTable(page) {
+    const tbody = document.querySelector('.ranking-table tbody');
+    tbody.innerHTML = '';
+
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    const paginatedItems = data.slice(start, end);
+
+    paginatedItems.forEach(player => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${player.rank}</td>
+        <td>${player.name}</td>
+        <td>${player.team}</td>
+        <td>${player.points}</td>
+        <td>${player.finishes}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  function setupPagination() {
+    const pageNumbers = document.querySelector('.page-numbers');
+    pageNumbers.innerHTML = '';
+
+    const totalPages = Math.ceil(data.length / rowsPerPage);
+
+    // Prev Button
+    const prev = document.createElement('a');
+    prev.href = '#';
+    prev.innerHTML = '&lt;';
+    prev.classList.add('prev');
+    prev.onclick = (event) => {
+      event.preventDefault();
+      if (currentPage > 1) {
+        currentPage--;
+        displayTable(currentPage);
+        setupPagination();
+      }
+    };
+    pageNumbers.appendChild(prev);
+
+    // Page Number Buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const page = document.createElement('a');
+      page.href = '#';
+      page.textContent = i;
+      if (i === currentPage) page.classList.add('active');
+      page.onclick = (event) => {
+        event.preventDefault();
+        currentPage = i;
+        displayTable(currentPage);
+        setupPagination();
+      };
+      pageNumbers.appendChild(page);
+    }
+
+    // Next Button
+    const next = document.createElement('a');
+    next.href = '#';
+    next.innerHTML = '&gt;';
+    next.classList.add('next');
+    next.onclick = (event) => {
+      event.preventDefault();
+      if (currentPage < totalPages) {
+        currentPage++;
+        displayTable(currentPage);
+        setupPagination();
+      }
+    };
+    pageNumbers.appendChild(next);
+  }
+
+  // Initialize
+  displayTable(currentPage);
+  setupPagination();
+
+});
+
+/// alredy login page treasfer 
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section) => {
+    section.style.display = (section.id === sectionId)
+      ? (["registration", "signup", "forgot"].includes(sectionId) ? "flex" : "block")
+      : "none";
+  });
+
+  const nav = document.querySelector('.nav');
+  if (["registration", "signup", "forgot"].includes(sectionId)) {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+
+  history.pushState({ section: sectionId }, '', `#${sectionId}`);
+}
+
+
+</script>
+
+<script>
+  /// reset password
+  document.getElementById('resetForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent form from submitting normally
+
+    const emailInput = this.querySelector('input[type="email"]').value.trim();
+
+    if (emailInput === '') {
+      alert('Please enter your Gmail ID.');
+    } else if (!emailInput.endsWith('@gmail.com')) {
+      alert('Please enter a valid Gmail address.');
+    } else {
+      alert(`A password reset link has been send to ${emailInput}`);
+      showSection('registration'); // Redirect to Login page
+    }
+  });
+</script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6866867bf389bf19111c2502/1iv87qksj';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+ 
+<script>
+  // ✅ Password Reset Form Handling
+  document.getElementById('resetForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const emailInput = this.querySelector('input[type="email"]').value.trim();
+
+    if (emailInput === '') {
+      alert('Please enter your Gmail ID.');
+    } else if (!emailInput.endsWith('@gmail.com')) {
+      alert('Please enter a valid Gmail address.');
+    } else {
+      alert(`A password reset link has been send to ${emailInput}`);
+      showSection('registration');
+    }
+  });
+
+  // ✅ Login Form Submission
+  document.querySelector('#registration form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = this.querySelector('input[type="email"]').value;
+    const password = this.querySelector('input[type="password"]').value;
+
+    fetch('login.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.startsWith('success:')) {
+        const username = data.split(':')[1];
+        sessionStorage.setItem('username', username);
+        checkLoginStatus();
+        showSection('home');
+      } else {
+        alert(data);
+      }
+    });
+  });
+
+  // ✅ Signup Form Submission
+  document.querySelector('#signup form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = this.querySelector('input[name="username"]').value;
+    const email = this.querySelector('input[name="email"]').value;
+    const password = this.querySelector('input[name="password"]').value;
+    const phone = this.querySelector('input[name="phone"]').value;
+
+    fetch('signup.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&phone=${encodeURIComponent(phone)}`
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.startsWith('success:')) {
+        const username = data.split(':')[1];
+        sessionStorage.setItem('username', username);
+        checkLoginStatus();
+        showSection('home');
+      } else {
+        alert(data);
+      }
+    });
+  });
+
+ 
+
+</script>
+<script>
+function openMenu() {
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeMenu() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+
+
+</script>
+
+
+<script>
+  // ✅ Update both desktop and hamburger with login/signup or username/logout
+  function checkLoginStatus() {
+    const desktopNav = document.getElementById('nav-right');
+    const sidebarUser = document.getElementById('hamburger-user');
+    const username = sessionStorage.getItem('username');
+
+    const userContent = username
+      ? `
+        <div class="user-info" style="display: flex; align-items: center; gap: 10px;">
+          <i class="fa fa-user-circle"></i>
+          <span>${username}</span>
+          <button onclick="logout()">Logout</button>
+        </div>
+      `
+      : `
+        <button onclick="showSection('registration')" class="login-button">LOGIN</button>
+        <button onclick="showSection('signup')" class="login-button">SIGN UP</button>
+      `;
+
+    if (desktopNav) {
+      desktopNav.innerHTML = userContent;
+    }
+
+    if (sidebarUser) {
+      sidebarUser.innerHTML = userContent;
+    }
+  }
+
+  // ✅ Logout logic
+  function logout() {
+    sessionStorage.removeItem('username');
+    checkLoginStatus();
+    showSection('home');
+  }
+
+  // ✅ Hamburger toggle for mobile
+  function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("active");
+  }
+
+  // ✅ Run when page loads
+  window.onload = function () {
+    showSection('home');
+    checkLoginStatus();
+  };
+</script>
+
+<script>
+// Send OTP form
+document.getElementById('otpRequestForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = this.querySelector('input[name="email"]').value;
+
+  fetch('send-otp.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: `email=${encodeURIComponent(email)}`
+  })
+  .then(res => res.text())
+  .then(data => {
+    if (data === 'sent') {
+      alert('OTP send to your Gmail.');
+      document.getElementById('otpRequestForm').style.display = 'none';
+      document.getElementById('resetWithOtpForm').style.display = 'block';
+    } else if (data === 'no_account') {
+      alert('No account found with this email.');
+    } else {
+      alert('Error sending OTP.');
+    }
+  });
+});
+
+// Verify OTP form
+document.getElementById('resetWithOtpForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const otp = this.querySelector('input[name="otp"]').value;
+  const newPassword = this.querySelector('input[name="newPassword"]').value;
+
+  fetch('verify-otp.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: `otp=${encodeURIComponent(otp)}&newPassword=${encodeURIComponent(newPassword)}`
+  })
+  .then(res => res.text())
+  .then(data => {
+    if (data === 'success') {
+      alert('Password reset successfully!');
+      showSection('registration');
+    } else {
+      alert('Invalid OTP.');
+    }
+  });
+});
+</script>
+
+<script>
+
+  /// Past Tournaments Slider
+let pastIndex = 0;
+const pastTrack = document.getElementById('pastSliderTrack');
+const pastCards = pastTrack.children;
+let autoPastSlider;
+
+function slidePastTournaments() {
+  pastIndex++;
+  const cardWidth = pastCards[0].offsetWidth + 20; // width + gap
+  pastTrack.style.transition = "transform 0.5s ease";
+  pastTrack.style.transform = `translateX(-${pastIndex * cardWidth}px)`;
+
+  // Smooth reset when reaching clone
+  if (pastIndex === pastCards.length - 1) {
+    setTimeout(() => {
+      pastTrack.style.transition = "none";
+      pastIndex = 0;
+      pastTrack.style.transform = `translateX(0px)`;
+    }, 500); // match the transition duration
+  }
+}
+
+window.addEventListener('load', () => {
+  autoPastSlider = setInterval(slidePastTournaments, 3000);
+});
+</script>
+
+
+  </body>
+
+ 
+
+</html>

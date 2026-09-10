@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive BGMI Nav</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    function closeMenu() {
+      document.getElementById("sidebar").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="nav">
+    <!-- Logo -->
+    <div class="nav-left">
+      <img src="your-logo.png" alt="Logo" />
+    </div>
+
+    <!-- Center nav buttons (desktop only) -->
+    <div class="nav-center">
+      <button onclick="showSection('home')">HOME</button>
+      <button onclick="showSection('tournament')">TOURNAMENT</button>
+      <button onclick="showSection('ranking')">RANKING</button>
+      <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+      <button onclick="showSection('payment')">PAYMENT</button>
+    </div>
+
+    <!-- Right side login + hamburger (hamburger hidden on desktop) -->
+    <div class="nav-right">
+      <button onclick="showSection('registration')" class="login-button">LOGIN</button>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+  <!-- Sidebar for mobile nav -->
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-top">
+      <button onclick="showSection('home')">HOME</button>
+      <button onclick="showSection('tournament')">TOURNAMENT</button>
+      <button onclick="showSection('ranking')">RANKING</button>
+      <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+      <button onclick="showSection('payment')">PAYMENT</button>
+    </div>
+    <div class="sidebar-bottom">
+      <button onclick="showSection('registration')" class="login-button">LOGIN</button>
+    </div>
+  </div>
+
+</body>
+<style>
+
+    /* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== NAVBAR STYLING ========== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 1001;
+}
+
+/* LOGO LEFT */
+.nav-left img {
+  height: 45px;
+}
+
+/* CENTER NAV BUTTONS (desktop) */
+.nav-center {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex: 1;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* COMMON BUTTON STYLING */
+.nav button,
+.login-button,
+.sidebar button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nav button:hover,
+.login-button:hover,
+.sidebar button:hover {
+  background-color: #333;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* HAMBURGER ICON (desktop hidden) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ========== SIDEBAR STYLING ========== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 250px;
+  background: #1a1a1a;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1002;
+}
+.sidebar.active {
+  right: 0;
+}
+.sidebar-top button {
+  width: 100%;
+  margin-bottom: 10px;
+  background: white;
+  color: black;
+  border: none;
+}
+.sidebar-bottom .login-button {
+  width: 100%;
+  background: white;
+  color: black;
+  border: none;
+}
+
+/* OVERLAY */
+.overlay {
+  display: none;
+}
+.overlay.active {
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* ========== MEDIA QUERY: MOBILE ========== */
+@media (max-width: 1090px) {
+  .nav-center {
+    display: none;
+  }
+
+  .nav-right .login-button {
+  display: none;
+}
+
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Hover Glow */
+.nav button:hover,
+.sidebar button:hover,
+.login-button:hover {
+  background-color: #333;
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff30;
+  transform: scale(1.03);
+}
+
+.nav button.active,
+.sidebar button.active {
+  background-color: #111;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 12px #00ffff, 0 0 25px #00ffff50;
+}
+
+
+</style>
+<script>
+  function showSection(section) {
+    // Remove 'active' from all nav and sidebar buttons
+    document.querySelectorAll('.nav button, .sidebar button').forEach(btn =>
+      btn.classList.remove('active')
+    );
+
+    // Add 'active' to the clicked button
+    const clickedButton = Array.from(document.querySelectorAll('button'))
+      .find(btn => btn.textContent.trim().toUpperCase() === section.toUpperCase());
+    
+    if (clickedButton) {
+      clickedButton.classList.add('active');
+    }
+
+    // You can also show/hide sections here if needed
+    console.log("Switching to:", section);
+  }
+</script>
+
+</html>

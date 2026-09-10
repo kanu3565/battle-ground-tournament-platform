@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Poster Carousel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .poster-carousel {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .carousel-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+      cursor: default;
+    }
+
+    .carousel-poster {
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      display: none;
+    }
+
+    /* Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      z-index: 10;
+      border-radius: 5px;
+    }
+    .left-arrow { left: 10px; }
+    .right-arrow { right: 10px; }
+
+    /* Dots */
+    .carousel-dots {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+    }
+    .carousel-dots .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .carousel-dots .dot.active {
+      background-color: #fff;
+    }
+
+    /* MEDIA QUERIES FOR POSTERS */
+
+    /* Mobile (up to 767px) */
+    @media (max-width: 767px) {
+      .poster-1 {
+        display: block;
+        background-image: url('0001_0-3.png');
+      }
+      .poster-2 {
+        display: block;
+        background-image: url('poster2.jpg');
+      }
+      .poster-3 {
+        display: block;
+        background-image: url('poster3.jpg');
+      }
+    }
+
+    /* Tablet (768px to 1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .poster-4 {
+        display: block;
+        background-image: url('Vmake1748577533214.png');
+      }
+      .poster-5 {
+        display: block;
+        background-image: url('tablet2.jpg');
+      }
+    }
+
+    /* Desktop (1025px and up) */
+    @media (min-width: 1025px) {
+      .poster-6 {
+        display: block;
+        background-image: url('0001_0-2.png');
+      }
+      .poster-7 {
+        display: block;
+        background-image: url('poster5.jpg');
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="poster-carousel">
+    <div class="carousel-container">
+      <button class="arrow left-arrow" onclick="slideLeft()">&#10094;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-poster poster-1"></div>
+        <div class="carousel-poster poster-2"></div>
+        <div class="carousel-poster poster-3"></div>
+        <div class="carousel-poster poster-4"></div>
+        <div class="carousel-poster poster-5"></div>
+        <div class="carousel-poster poster-6"></div>
+        <div class="carousel-poster poster-7"></div>
+      </div>
+      <button class="arrow right-arrow" onclick="slideRight()">&#10095;</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <script>
+    let currentSlide = 0;
+    let autoSlideInterval;
+    let isDragging = false;
+    let startX = 0;
+
+    const track = document.getElementById("carouselTrack");
+    const dotsContainer = document.getElementById("carouselDots");
+
+    function getVisiblePosters() {
+      return Array.from(document.querySelectorAll(".carousel-poster"))
+        .filter(poster => window.getComputedStyle(poster).display !== "none");
+    }
+
+    function updateDots() {
+      dotsContainer.innerHTML = "";
+      const posters = getVisiblePosters();
+      posters.forEach((_, i) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (i === currentSlide) dot.classList.add("active");
+        dot.addEventListener("click", () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function updateSlidePosition() {
+      const posters = getVisiblePosters();
+      if (currentSlide >= posters.length) currentSlide = 0;
+      if (posters.length > 0) {
+        const slideWidth = posters[0].clientWidth;
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      }
+      const dots = dotsContainer.querySelectorAll(".dot");
+      dots.forEach(dot => dot.classList.remove("active"));
+      if (dots[currentSlide]) dots[currentSlide].classList.add("active");
+    }
+
+    function slideRight() {
+      const posters = getVisiblePosters();
+      if (posters.length === 0) return;
+      currentSlide = (currentSlide + 1) % posters.length;
+      updateSlidePosition();
+      resetAutoSlide();
+    }
+
+    function slideLeft() {
+      const posters = getVisiblePosters();
+      if (posters.length === 0) return;
+      currentSlide = (currentSlide - 1 + posters.length) % posters.length;
+      updateSlidePosition();
+      resetAutoSlide();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlidePosition();
+      resetAutoSlide();
+    }
+
+    function startAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(slideRight, 4000);
+    }
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    // Touch Support
+    track.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+      track.style.transition = "none";
+    });
+    track.addEventListener("touchend", e => {
+      const diff = e.changedTouches[0].clientX - startX;
+      track.style.transition = "transform 0.5s ease";
+      if (diff > 50) slideLeft();
+      else if (diff < -50) slideRight();
+      else updateSlidePosition();
+    });
+
+    // Mouse Drag Support
+    track.addEventListener("mousedown", e => {
+      isDragging = true;
+      startX = e.clientX;
+      track.style.cursor = "grabbing";
+      track.style.transition = "none";
+    });
+    track.addEventListener("mousemove", e => {
+      if (!isDragging) return;
+      const posters = getVisiblePosters();
+      if (posters.length === 0) return;
+      const diff = e.clientX - startX;
+      track.style.transform = `translateX(${-currentSlide * posters[0].clientWidth + diff}px)`;
+    });
+    track.addEventListener("mouseup", e => {
+      if (!isDragging) return;
+      isDragging = false;
+      track.style.cursor = "default";
+      track.style.transition = "transform 0.5s ease";
+      const diff = e.clientX - startX;
+      if (diff > 100) slideLeft();
+      else if (diff < -100) slideRight();
+      else updateSlidePosition();
+    });
+    track.addEventListener("mouseleave", () => {
+      if (isDragging) {
+        isDragging = false;
+        track.style.cursor = "default";
+        track.style.transition = "transform 0.5s ease";
+        updateSlidePosition();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      currentSlide = 0;
+      updateDots();
+      updateSlidePosition();
+    });
+
+    window.addEventListener("load", () => {
+      updateDots();
+      updateSlidePosition();
+      startAutoSlide();
+    });
+  </script>
+</body>
+</html>

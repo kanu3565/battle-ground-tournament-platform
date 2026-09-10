@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Arena | BGMI Tournaments</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script defer src="js/script.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #00ffc8;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ffc8;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle div {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px;
+      background: url('images/bgmi-banner.jpg') no-repeat center center/cover;
+      min-height: 80vh;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00ffc8;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #ffffffcc;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-btn {
+      background-color: #00ffc8;
+      color: #0f0f0f;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero .cta-btn:hover {
+      background-color: #00dab0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    .intro {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #141414;
+    }
+
+    .intro h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #00ffc8;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #cccccc;
+    }
+
+    .intro .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intro .buttons a {
+      background-color: #00ffc8;
+      color: #0f0f0f;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .intro .buttons a:hover {
+      background-color: #00dab0;
+    }
+
+    .upcoming-section {
+      padding: 80px 20px;
+      background: #0f0f0f;
+    }
+
+    .upcoming-section h2 {
+      text-align: center;
+      color: #00ffc8;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+    }
+
+    .card-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .card-slider::-webkit-scrollbar-thumb {
+      background: #00ffc8;
+      border-radius: 5px;
+    }
+
+    .tournament-card {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      color: white;
+      box-shadow: 0 0 15px #00000080;
+      transition: transform 0.3s;
+    }
+
+    .tournament-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tournament-card h3 {
+      color: #00ffc8;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .tournament-card p {
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+
+    .tournament-card .join-btn {
+      background-color: #00ffc8;
+      color: #0f0f0f;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fitness Arena</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="register.html">Register</a>
+      <a href="rules.html">Rules</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Compete. Win. Conquer.</h1>
+    <p>Join thrilling BGMI tournaments and prove your squad’s dominance in the arena. Get rewards, recognition, and pure action!</p>
+    <button class="cta-btn" onclick="window.location.href='tournaments.html'">Join a Tournament</button>
+  </section>
+
+  <section class="intro">
+    <h2>Kya Tum Ready Ho?</h2>
+    <p>Yeh koi normal BGMI tournament nahi hai. Yeh hai ek battleground jahan har bullet, har move aur har kill matter karta hai! Fitness Arena par milta hai aapko ek ultimate stage — jahaan thrill, glory aur cash prizes aapka intezaar kar rahe hain. Apni squad ke saath aa jao, aur dikha do India ko ki asli warriors kaun hain!</p>
+    <div class="buttons">
+      <a href="register.html">Join Tournament</a>
+      <a href="tournaments.html">View Tournaments</a>
+    </div>
+  </section>
+
+  <section class="upcoming-section">
+    <h2>Upcoming Tournaments</h2>
+    <div class="card-slider">
+      <div class="tournament-card">
+        <h3>BGMI Squad Showdown</h3>
+        <p>Date: 5 May 2025</p>
+        <p>Entry Fee: ₹50</p>
+        <p>Prize Pool: ₹2000</p>
+        <a href="register.html" class="join-btn">Join Now</a>
+      </div>
+      <div class="tournament-card">
+        <h3>Solo Sniper Elite</h3>
+        <p>Date: 8 May 2025</p>
+        <p>Entry Fee: Free</p>
+        <p>Prize Pool: ₹500</p>
+        <a href="register.html" class="join-btn">Join Now</a>
+      </div>
+      <div class="tournament-card">
+        <h3>Ultimate Rush Hour</h3>
+        <p>Date: 10 May 2025</p>
+        <p>Entry Fee: ₹100</p>
+        <p>Prize Pool: ₹5000</p>
+        <a href="register.html" class="join-btn">Join Now</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

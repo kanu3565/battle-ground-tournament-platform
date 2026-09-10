@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BattleGround HUB</title>
+  <link rel="icon" type="image/png" href="logo1.png">
+  <link rel="stylesheet" href="bgmi.css">
+  <script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="light">
+
+<!-- Navigation -->
+<div class="nav">
+  <div class="nav-left">
+    <img src="logo1.png" alt="Logo" />
+  </div>
+
+  <div class="nav-center">
+    <button onclick="showSection('home')">HOME</button>
+    <button onclick="showSection('tournament')">TOURNAMENT</button>
+    <button onclick="showSection('ranking')">RANKING</button>
+    <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+    <button onclick="showSection('payment')">PAYMENT</button>
+  </div>
+
+  <div class="nav-right">
+    <button onclick="showSection('registration')" class="login-button">LOGIN</button>
+    <button onclick="showSection('signup')" class="login-button">SIGN UP</button>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</div>
+
+<!-- Overlay Sidebar (Mobile) -->
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-top">
+    <button onclick="showSection('home')">HOME</button>
+    <button onclick="showSection('tournament')">TOURNAMENT</button>
+    <button onclick="showSection('ranking')">RANKING</button>
+    <button onclick="showSection('announcement')">ANNOUNCEMENT</button>
+    <button onclick="showSection('payment')">PAYMENT</button>
+  </div>
+  <div class="sidebar-bottom">
+    <button class="login-button" onclick="showSection('registration')">LOGIN</button>
+    <button class="login-button" onclick="showSection('signup')">SIGN UP</button>
+  </div>
+</div>
+
+<!-- ✔️ Login Section -->
+<div class="section registration-section" id="registration" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <div class="logo-container">
+        <img src="logo1.png" alt="Logo">
+      </div>
+      <h2>Login to the Arena</h2>
+
+      <form>
+        <div class="input-container">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Enter Username" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Gmail ID" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-phone"></i>
+          <input type="tel" placeholder="Mobile No." required>
+        </div>
+        <button type="submit" class="create-account-btn">Create Account</button>
+      </form>
+
+      <div class="or-section">OR</div>
+      <div class="social-buttons">
+        <button class="google"><i class="fab fa-google"></i> Google</button>
+        <button class="facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+        <button class="discord"><i class="fab fa-discord"></i> Discord</button>
+      </div>
+
+      <div class="forgot-login">
+        <a href="#" class="forgot">Forgot Password?</a>
+        <a href="#" class="login-btn" onclick="showSection('signup')">Sign Up</a>
+      </div>
+      <a href="#" class="back-btn" onclick="goBack()">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<!-- ✔️ Signup Section -->
+<div class="section registration-section" id="signup" style="display: none;">
+  <div class="left-section"></div>
+  <div class="right-section">
+    <div class="form-container">
+      <div class="logo-container">
+        <img src="logo1.png" alt="Logo">
+      </div>
+      <h2>Create Your Account</h2>
+
+      <form>
+        <div class="input-container">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Enter Username" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Gmail ID" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-phone"></i>
+          <input type="tel" placeholder="Mobile No." required>
+        </div>
+        <button type="submit" class="create-account-btn">Sign Up</button>
+      </form>
+
+      <div class="or-section">OR</div>
+      <div class="social-buttons">
+        <button class="google"><i class="fab fa-google"></i> Google</button>
+        <button class="facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+        <button class="discord"><i class="fab fa-discord"></i> Discord</button>
+      </div>
+
+      <div class="forgot-login">
+        <a href="#" class="forgot" onclick="showSection('registration')">Already have an account? Login</a>
+      </div>
+      <a href="#" class="back-btn" onclick="goBack()">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<!-- ✔️ Home Section -->
+<div class="section home-section" id="home">
+  <h1>Welcome to BattleGround HUB</h1>
+  <p>Start competing, start winning!</p>
+</div>
+
+<!-- 🔥 Script -->
+<script>
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section) => {
+    section.style.display = (section.id === sectionId) ? (sectionId === "registration" || sectionId === "signup" ? "flex" : "block") : "none";
+  });
+
+  const nav = document.querySelector('.nav');
+  if (sectionId === "registration" || sectionId === "signup") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+
+  history.pushState({section: sectionId}, '', `#${sectionId}`);
+}
+
+window.onpopstate = function(event) {
+  const sectionId = event.state?.section || 'home';
+  showSection(sectionId);
+};
+
+function goBack() {
+  showSection('home');
+}
+
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+}
+
+function closeMenu() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
